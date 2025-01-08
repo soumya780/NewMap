@@ -18,11 +18,12 @@ const defaultCenter = {
   lng: 77.7152470150009,
 };
 
+// Updated imageBounds for the new overlay location
 const imageBounds = {
-  north: 13.107,
-  south: 13.097,
-  east: 77.6145,
-  west: 77.6045,
+  north: 13.117,  // New northern boundary
+  south: 13.107,  // New southern boundary
+  east: 77.6245,  // New eastern boundary
+  west: 77.6145,  // New western boundary
 };
 
 const GoogleMapComponent = () => {
