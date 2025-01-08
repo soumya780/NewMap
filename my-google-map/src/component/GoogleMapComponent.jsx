@@ -59,7 +59,7 @@ const GoogleMapComponent = () => {
           const newLocation = { lat, lng };
           setMapCenter(newLocation);
           setMarkerPosition(newLocation);
-          mapRef.current.setZoom(15); // Adjust zoom for searched location
+          mapRef.current.setZoom(15); 
         } else {
           console.error("Place geometry not found.");
         }
@@ -76,10 +76,10 @@ const GoogleMapComponent = () => {
   const toggleOverlay = () => {
     if (overlayRef.current) {
       if (isOverlayVisible) {
-        overlayRef.current.setMap(null); // Hide overlay
+        overlayRef.current.setMap(null); 
       } else {
-        overlayRef.current.setMap(mapRef.current); // Show overlay
-        mapRef.current.setZoom(15); // Set zoom level
+        overlayRef.current.setMap(mapRef.current); 
+        mapRef.current.setZoom(15); 
       }
       setIsOverlayVisible(!isOverlayVisible);
     }
