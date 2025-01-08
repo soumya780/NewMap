@@ -37,10 +37,6 @@ You can view the source code at: [NewMap on GitHub](https://github.com/soumya780
 4. Create .env File: In the project root directory, create a .env file and add your Google Maps API key:
    ```bash
    VITE_GOOGLE_MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
-
-5. Install Dependencies::
-   ```bash
-   npm install
    
 ---
 
