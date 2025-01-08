@@ -14,21 +14,6 @@ You can view the source code at: [NewMap on GitHub](https://github.com/soumya780
 
 ---
 
-## Project Structure
-
-. |-- public | |-- index.html |-- src | |-- components | | |-- GoogleMapComponent.jsx | |-- assets | | |-- layerImg.png | |-- App.js | |-- index.js |-- .env |-- README.md |-- package.json
-
-### Key Files
-
-1. **GoogleMapComponent.jsx**:
-   - Main component implementing Google Maps functionality.
-2. **layerImg.png**:
-   - Image used for the overlay on the map.
-3. **.env**:
-   - Stores the Google Maps API key (ensure this file is included in `.gitignore` to avoid exposing sensitive information).
-
----
-
 ## Installation and Execution
 
 ### Prerequisites
@@ -56,6 +41,7 @@ You can view the source code at: [NewMap on GitHub](https://github.com/soumya780
 5. Install Dependencies::
    ```bash
    npm install
+   
 ---
 
 ### Libraries and Technologies Used
