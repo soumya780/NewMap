@@ -25,8 +25,6 @@ const imageBounds = {
   west: 77.6045,
 };
 
-//to show the overlay image on the exact place we need the proper boundary of the yellhenka town to show the overlay on exact place.
-
 const GoogleMapComponent = () => {
   const [mapCenter, setMapCenter] = useState(defaultCenter);
   const [markerPosition, setMarkerPosition] = useState(defaultCenter);
