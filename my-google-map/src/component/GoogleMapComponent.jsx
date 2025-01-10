@@ -9,7 +9,7 @@ import { FiSearch } from "react-icons/fi";
 import layerImage from "./layerImg.png";
 
 const mapContainerStyle = {
-  width: "100%",
+  width: "70%",
   height: "550px",
 };
 
@@ -20,10 +20,11 @@ const defaultCenter = {
 
 // Updated imageBounds for the new overlay location
 const imageBounds = {
-  north: 13.117,  // New northern boundary
-  south: 13.107,  // New southern boundary
-  east: 77.6245,  // New eastern boundary
-  west: 77.6145,  // New western boundary
+  // mid point of the photo
+  north: 13.120013632526961, // Northern boundary
+  south: 13.066013632526961, // Southern boundary
+  east: 77.61033270322493, // Eastern boundary
+  west: 77.55483270322493, // Western boundary
 };
 
 const GoogleMapComponent = () => {
@@ -60,7 +61,7 @@ const GoogleMapComponent = () => {
           const newLocation = { lat, lng };
           setMapCenter(newLocation);
           setMarkerPosition(newLocation);
-          mapRef.current.setZoom(15); 
+          mapRef.current.setZoom(15);
         } else {
           console.error("Place geometry not found.");
         }
@@ -77,10 +78,10 @@ const GoogleMapComponent = () => {
   const toggleOverlay = () => {
     if (overlayRef.current) {
       if (isOverlayVisible) {
-        overlayRef.current.setMap(null); 
+        overlayRef.current.setMap(null);
       } else {
-        overlayRef.current.setMap(mapRef.current); 
-        mapRef.current.setZoom(15); 
+        overlayRef.current.setMap(mapRef.current);
+        mapRef.current.setZoom(15);
       }
       setIsOverlayVisible(!isOverlayVisible);
     }
@@ -121,12 +122,13 @@ const GoogleMapComponent = () => {
             overlayRef.current = new window.google.maps.GroundOverlay(
               layerImage,
               imageBounds,
-              { opacity: 0.5 }
+              { opacity: 0.7 }
             );
           }}
           onClick={handleMapClick}
         >
-          {isMarkerVisible && <Marker position={markerPosition} />} {/* Always render marker */}
+          {isMarkerVisible && <Marker position={markerPosition} />}{" "}
+          {/* Always render marker */}
         </GoogleMap>
         <button
           onClick={toggleOverlay}
