@@ -25,6 +25,12 @@ const imageBounds = {
   south: 13.066013632526961, // Southern boundary
   east: 77.61033270322493, // Eastern boundary
   west: 77.55483270322493, // Western boundary
+  
+  // mid point of the photo
+  //  north: 13.09312690648424 + (4.09 / 111),
+  // south: 13.09312690648424 - (4.09 / 111),
+  // east: 77.5833507782988 + (5.22 / (111 * Math.cos((13.09312690648424 * Math.PI) / 180))),
+  // west: 77.5833507782988 - (5.22 / (111 * Math.cos((13.09312690648424 * Math.PI) / 180))),
 };
 
 const GoogleMapComponent = () => {
